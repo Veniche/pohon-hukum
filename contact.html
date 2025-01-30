@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Pohon Hukum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        header {
+            margin-bottom: 0;
+        }
+
+        main {
+            padding-top: 3rem;
+        }
+
+        .active-nav {
+            background-color: #83945A; /* Updated to match banner color */
+            color: white !important;
+            border-radius: 50px;
+            padding: 8px 20px;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .active-nav:hover {
+            background-color: #6f7f53; /* Darker version of the updated color */
+            color: white !important; /* Ensure text stays white */
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        /* Contact Form Styling */
+        .contact-form {
+            background-color: #A6A6A6; /* Updated to grey */
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 12px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #83945A;
+            color: white;
+            border-radius: 50px;
+            padding: 8px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #6f7f53;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 3rem;
+            height: 400px;
+        }
+
+        /* Right-align Form */
+        .contact-form-container {
+            text-align: right;
+        }
+
+        /* Contact Info Box Styling */
+        .contact-info {
+            background-color: #83945A; /* Updated to match the banner color */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white; /* Set text color to white */
+        }
+
+        /* Radio button normal size */
+        .form-check-input {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header Section -->
+    <header class="py-3">
+        <div class="container">
+            <nav class="d-flex align-items-center justify-content-between">
+                <!-- Logo on the left -->
+                <a href="index.html">
+                    <img src="assets/logos/logo.png" alt="Company Logo" style="height: 200px; max-width: 400px;">
+                </a>
+
+                <!-- Navigation Menu -->
+                <ul class="nav fs-5">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-dark" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-dark" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link active-nav" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Us Section -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <!-- Contact Form and Contact Info -->
+            <div class="row justify-content-center">
+                <h2 class="text-end fw-bold mb-4">Contact Us</h2>
+                <!-- Contact Info Box (Left) -->
+                <div class="col-md-4">
+                    <div class="contact-info" style="background-color: #83945A; color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h4 class="fw-bold">Contact Information</h4>
+                        <p>Masih ada pertanyaan? Isi form berikut ini. Tim kami akan segera menghubungi Anda dalam kurun waktu 1 x 24 jam.</p>
+                        <p><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> +62 21 1234 5678</p>
+                        <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> info@pohonhukum.com</p>
+                        <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Jl. Tawakal Raya No. 39 C, Tomang, Jakarta Barat</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Right) -->
+                <div class="col-md-8 contact-form-container">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nama Depan" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nama Belakang" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="No. HP (WhatsApp)" required>
+                                </div>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="service" class="form-label" style="font-weight: normal;">Saya membutuhkan:</label>
+                                <div class="d-flex align-items-center">
+                                    <div class="form-check me-4">
+                                        <input class="form-check-input" type="radio" name="service" id="serviceLegalitas" value="Jasa Legalitas" required style="width: 18px; height: 18px;">
+                                        <label class="form-check-label" for="serviceLegalitas" style="font-weight: normal; margin-left: 8px; vertical-align: middle;">
+                                            Jasa Legalitas
+                                        </label>
+                                    </div>
+                                    <div class="form-check me-4">
+                                        <input class="form-check-input" type="radio" name="service" id="servicePerpajakan" value="Jasa Perpajakan" style="width: 18px; height: 18px;">
+                                        <label class="form-check-label" for="servicePerpajakan" style="font-weight: normal; margin-left: 8px; vertical-align: middle;">
+                                            Jasa Perpajakan
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="service" id="serviceKonsultasiHukum" value="Konsultasi Hukum" style="width: 18px; height: 18px;">
+                                        <label class="form-check-label" for="serviceKonsultasiHukum" style="font-weight: normal; margin-left: 8px; vertical-align: middle;">
+                                            Konsultasi Hukum
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Pertanyaan" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section" style="height: 400px;">
+                <!-- Embed Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.310706876292!2d106.79974881530399!3d-6.173250768001813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3c76d9e9fbf%3A0x1c53e37272d5a86a!2sJl.%20Tawakal%20Raya%20No.%2039%20C%2C%20Tomang%2C%20Grogol%20Petamburan%2C%20Jakarta%20Barat!5e0!3m2!1sen!2sid!4v1674532110573!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer class="mt-auto py-4" style="background-color: #83945A; color: white;">
+        <div class="container">
+            <div class="row">
+                <!-- Navigation (Left) -->
+                <div class="col-md-6 text-start">
+                    <h5 class="fw-bold fs-4">NAVIGATION</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Address (Right) -->
+                <div class="col-md-6 text-end">
+                    <h5 class="fw-bold fs-4">JAKARTA</h5>
+                    <p class="mb-0">Jl Tawakal Raya No 39 C, Tomang,</p>
+                    <p class="mb-0">Grogol Petamburan,</p>
+                    <p>Jakarta Barat</p>
+                </div>
+            </div>
+
+            <!-- Copyright Text (Centered at Bottom) -->
+            <div class="text-center mt-4">
+                <p class="mb-0">©Copyright 2022 Pohon Hukum - All Rights Reserved</p>
+                <p class="mb-0">A Business of PT Pohon Hukum Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
