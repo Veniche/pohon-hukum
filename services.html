@@ -8,6 +8,10 @@
     <link rel="icon" type="image/png" href="assets/logos/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         header {
             margin-bottom: 0;
         }
@@ -133,6 +137,7 @@
         .legalitas-box h5, .perpajakan-box h5, .konsultasi-box h5 {
             font-size: 1.5rem;
             margin: 1rem 0;
+            min-height: 60px;
         }
 
         .legalitas-box .price, .perpajakan-box .price, .konsultasi-box .price {
@@ -154,6 +159,11 @@
             background-color: #6f7f53;
         }
 
+        .row.g-4 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -202,21 +212,27 @@
             <!-- Icons Section -->
             <div class="row icons-section text-center">
                 <div class="col-12 col-md-4 icon-box">
-                    <img src="assets/logos/perpajakan.png" alt="Icon 1">
-                    <h4>Perpajakan</h4>
+                    <a href="#perpajakan" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/perpajakan.png" alt="Perpajakan">
+                        <h4>Perpajakan</h4>
+                    </a>
                 </div>
                 <div class="col-12 col-md-4 icon-box">
-                    <img src="assets/logos/legalitas.png" alt="Icon 2">
-                    <h4>Legalitas</h4>
+                    <a href="#legalitas" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/legalitas.png" alt="Legalitas">
+                        <h4>Legalitas</h4>
+                    </a>
                 </div>
                 <div class="col-12 col-md-4 icon-box">
-                    <img src="assets/logos/konsultasi.png" alt="Icon 3">
-                    <h4>Konsultasi Hukum</h4>
+                    <a href="#konsultasi" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/konsultasi.png" alt="Konsultasi Hukum">
+                        <h4>Konsultasi Hukum</h4>
+                    </a>
                 </div>
             </div>
 
             <!-- Legalitas Section -->
-            <div class="legalitas-section">
+            <div id="legalitas" class="legalitas-section">
                 <h2 class="legalitas-header">Legalitas</h2>
                 <div class="row g-4">
                     <!-- Box 1 -->
@@ -295,7 +311,7 @@
             </div>
 
             <!-- Perpajakan Section -->
-            <div class="perpajakan-section">
+            <div id="perpajakan" class="perpajakan-section">
                 <h2 class="perpajakan-header">Perpajakan</h2>
                 <div class="row g-4">
                     <!-- Box 1 -->
@@ -329,7 +345,7 @@
             </div>
 
             <!-- Konsultasi Hukum Section -->
-            <div class="konsultasi-section">
+            <div id="konsultasi" class="konsultasi-section">
                 <h2 class="konsultasi-header">Konsultasi Hukum</h2>
                 <div class="row g-4">
                     <!-- Box 1 -->
