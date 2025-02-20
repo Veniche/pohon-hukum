@@ -120,18 +120,18 @@
             align-items: center;
         }
 
-        /* Legalitas Section */
-        .service-section, .legalitas-section, .perpajakan-section, .konsultasi-section {
+        /* Services Section */
+        .service-section {
             margin-top: 5rem;
         }
 
-        .service-header, .legalitas-header, .perpajakan-header, .konsultasi-header {
+        .service-header {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 2rem;
         }
 
-        .service-box, .legalitas-box, .perpajakan-box, .konsultasi-box {
+        .service-box {
             height: 100%;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -145,11 +145,11 @@
             justify-content: center;
         }
 
-        .service-box:hover, .legalitas-box:hover, .perpajakan-box:hover, .konsultasi-box:hover {
+        .service-box:hover {
             transform: translateY(-10px);
         }
 
-        .service-box img, .legalitas-box img, .perpajakan-box img, .konsultasi-box img {
+        .service-box img {
             max-width: 100%;
             height: auto;
             max-width: 300px;
@@ -157,29 +157,39 @@
             display: block;
         }
 
-        .service-box h5, .legalitas-box h5, .perpajakan-box h5, .konsultasi-box h5 {
+        .service-box h5 {
             font-size: 1.5rem;
             margin: 1rem 0;
             min-height: 60px;
         }
 
-        .service-box .price, .legalitas-box .price, .perpajakan-box .price, .konsultasi-box .price {
+        .service-box .price {
             font-size: 1.25rem;
             color: #28a745;
             margin-bottom: 1rem;
         }
 
-        .service-box .btn-buat, .legalitas-box .btn-buat, .perpajakan-box .btn-buat, .konsultasi-box .btn-buat {
+        .service-box .btn-buat {
             background-color: #83945A;
             color: white;
             border-radius: 50px;
             padding: 8px 20px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            outline: none !important;
+            box-shadow: none !important;
+            border: none; /* Optional: If there's a visible border */
         }
 
-        .service-box .btn-buat:hover, .legalitas-box .btn-buat:hover, .perpajakan-box .btn-buat:hover, .konsultasi-box .btn-buat:hover {
+        .service-box .btn-buat:hover {
             background-color: #6f7f53;
+        }
+
+        .service-box .btn-buat:focus, 
+        .service-box .btn-buat:active {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none; /* Ensure border is also removed */
         }
 
         .row.g-4 {
