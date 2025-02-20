@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services - Pohon Hukum</title>
+    <link rel="icon" type="image/png" href="assets/logos/logo-inverted.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            margin-bottom: 0;
+        }
+
+        main {
+            padding-top: 3rem;
+        }
+
+        /* Ensure nav items have consistent width */
+        .nav-item {
+            min-width: 140px; /* Adjust as needed for better width */
+            text-align: center; /* Ensures text is centered */
+        }
+
+        /* Style for all nav links */
+        .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: block; /* Ensures full width */
+            width: 100%; /* Fills parent `.nav-item` */
+        }
+
+        /* Hover effect */
+        .nav-link:hover {
+            background-color: #6f7f53;
+            color: white !important;
+        }
+
+        /* Active link styling */
+        .active-nav {
+            background-color: #83945A;
+            color: white !important;
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+        }
+
+        .active-nav:hover {
+            background-color: #6f7f53;
+            color: white !important;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        /* Hero section 50:50 split style */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            height: 30vh;
+        }
+
+        .hero-section .hero-image {
+            width: 50%;
+            height: 100%;
+        }
+
+        .hero-section .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-section .text-box {
+            width: 50%;
+            height: 100%;
+            background-color: #83945A;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Custom icon section */
+        .icons-section {
+            margin-top: 3rem;
+        }
+
+        .icon-box {
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-box img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .icon-box h4 {
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 1.25rem;
+        }
+
+        .icons-section .col-12 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Legalitas Section */
+        .legalitas-section, .perpajakan-section, .konsultasi-section {
+            margin-top: 5rem;
+        }
+
+        .legalitas-header, .perpajakan-header, .konsultasi-header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .legalitas-box, .perpajakan-box, .konsultasi-box {
+            height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Ensures everything inside is centered */
+            justify-content: center;
+        }
+
+        .legalitas-box:hover, .perpajakan-box:hover, .konsultasi-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .legalitas-box img, .perpajakan-box img, .konsultasi-box img {
+            max-width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 0 auto; /* Ensures the image is centered */
+            display: block;
+        }
+
+        .legalitas-box h5, .perpajakan-box h5, .konsultasi-box h5 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            min-height: 60px;
+        }
+
+        .legalitas-box .price, .perpajakan-box .price, .konsultasi-box .price {
+            font-size: 1.25rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+
+        .legalitas-box .btn-buat, .perpajakan-box .btn-buat, .konsultasi-box .btn-buat {
+            background-color: #83945A;
+            color: white;
+            border-radius: 50px;
+            padding: 8px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .legalitas-box .btn-buat:hover, .perpajakan-box .btn-buat:hover, .konsultasi-box .btn-buat:hover {
+            background-color: #6f7f53;
+        }
+
+        .row.g-4 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header Section -->
+    <header class="py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logos/logo.png" alt="Company Logo" class="img-fluid" style="height: 150px; max-width: 300px;">
+                </a>
+
+                <!-- Burger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav fs-5">
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link text-dark" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link active-nav" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link text-dark" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="hero-section">
+                <!-- Left Image -->
+                <div class="hero-image">
+                    <img src="assets/images/services-hero.jpg" alt="Hero Image">
+                </div>
+
+                <!-- Right Text Box -->
+                <div class="text-box">
+                    <h1 class="text-center display-4 display-md-5 display-sm-6">
+                        Committed to help you build your <em>dream</em> company.
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Icons Section -->
+            <div class="row icons-section text-center">
+                <div class="col-6 col-md-2 icon-box">
+                    <a href="#legalitas" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/legalitas.png" alt="Legalitas">
+                        <h4>Legalitas</h4>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 icon-box">
+                    <a href="#perpajakan" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/perpajakan.png" alt="Perpajakan">
+                        <h4>Perpajakan</h4>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 icon-box">
+                    <a href="#konsultasi" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/konsultasi.png" alt="Konsultasi Hukum">
+                        <h4>Konsultasi Hukum</h4>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 icon-box">
+                    <a href="#jasa-hukum" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/konsultasi.png" alt="Konsultasi Hukum">
+                        <h4>Jasa Hukum</h4>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 icon-box">
+                    <a href="#perkantoran" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/konsultasi.png" alt="Konsultasi Hukum">
+                        <h4>Perkantoran</h4>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 icon-box">
+                    <a href="#lainnya" style="text-decoration: none; color: inherit;">
+                        <img src="assets/logos/konsultasi.png" alt="Konsultasi Hukum">
+                        <h4>Jasa Lainnya</h4>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Legalitas Section -->
+            <div id="legalitas" class="legalitas-section">
+                <h2 class="legalitas-header">Legalitas</h2>
+                <div class="row g-4">
+                    <!-- Box 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/pt.png" alt="Service 1">
+                            <h5>Pembuatan PT Penanaman Modal Dalam Negeri (PMDN)</h5>
+                            <div class="price">Rp7.990.000,-</div>
+                            <button class="btn-buat" data-bs-toggle="modal" data-bs-target="#ptModal">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/cv.png" alt="Service 2">
+                            <h5>Pembuatan CV</h5>
+                            <div class="price">Rp4.990.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/firma.png" alt="Service 3">
+                            <h5>Pembuatan Firma</h5>
+                            <div class="price">Rp1.500.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/pma.png" alt="Service 4">
+                            <h5>Pembuatan PT Penanaman Modal Asing (PMA)</h5>
+                            <div class="price">Rp11.000.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 5 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/haki.png" alt="Service 5">
+                            <h5>Pendaftaran Merek</h5>
+                            <div class="price">Rp1.500.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 6 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/oss.png" alt="Service 6">
+                            <h5>Nomor Induk Berusaha (NIB - OSS)</h5>
+                            <div class="price">Rp900.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 7 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/legalitas/akta.png" alt="Service 7">
+                            <h5>Akta Perubahan PT</h5>
+                            <div class="price">Rp5.990.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perpajakan Section -->
+            <div id="perpajakan" class="perpajakan-section">
+                <h2 class="perpajakan-header">Perpajakan</h2>
+                <div class="row g-4">
+                    <!-- Box 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="perpajakan-box mb-4">
+                            <img src="assets/perpajakan/perhitungan.png" alt="Service 1">
+                            <h5>Perhitungan Pajak</h5>
+                            <div class="price">Rp1.500.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="perpajakan-box mb-4">
+                            <img src="assets/perpajakan/laporan.png" alt="Service 2">
+                            <h5>Laporan Pajak Tahunan</h5>
+                            <div class="price">Rp11.000.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="perpajakan-box mb-4">
+                            <img src="assets/perpajakan/pengembalian.png" alt="Service 3">
+                            <h5>Pengembalian Pajak</h5>
+                            <div class="price">Rp1.500.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 8 -->
+                    <div class="col-12 col-md-4">
+                        <div class="legalitas-box mb-4">
+                            <img src="assets/perpajakan/npwp.png" alt="Service 8">
+                            <h5>NPWP</h5>
+                            <div class="price">Rp499.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Konsultasi Hukum Section -->
+            <div id="konsultasi" class="konsultasi-section">
+                <h2 class="konsultasi-header">Konsultasi Hukum</h2>
+                <div class="row g-4">
+                    <!-- Box 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/konsultasi/advokat.png" alt="Service 1">
+                            <h5>Advokat</h5>
+                            <div class="price">Rp99.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/konsultasi/notaris.png" alt="Service 2">
+                            <h5>Notaris</h5>
+                            <div class="price">Rp350.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jasa Hukum Section -->
+            <div id="jasa-hukum" class="konsultasi-section">
+                <h2 class="konsultasi-header">Jasa Hukum</h2>
+                <div class="row g-4">
+                    <!-- Box 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/konsultasi/mediator.png" alt="Service 3">
+                            <h5>Mediator</h5>
+                            <div class="price">Rp450.000,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perkantoran Section -->
+            <div id="perkantoran" class="konsultasi-section">
+                <h2 class="konsultasi-header">Perkantoran</h2>
+                <div class="row g-4">
+                    <!-- Box 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/konsultasi/advokat.png" alt="Service 1">
+                            <h5>Virtual Office</h5>
+                            <div class="price">RpX.XXX,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/konsultasi/notaris.png" alt="Service 2">
+                            <h5>Sewa Office</h5>
+                            <div class="price">RpX.XXX,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jasa Lainnya Section -->
+            <div id="lainnya" class="konsultasi-section">
+                <h2 class="konsultasi-header">Jasa Lainnya</h2>
+                <div class="row g-4">
+                    <!-- Box 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/legalitas/pt.png" alt="Service 1">
+                            <h5>Pembuatan Website</h5>
+                            <div class="price">RpX.XXX,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="konsultasi-box mb-4">
+                            <img src="assets/legalitas/pt.png" alt="Service 2">
+                            <h5>Digital Marketing</h5>
+                            <div class="price">RpX.XXX,-</div>
+                            <a href="#" class="btn-buat">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ptModal" tabindex="-1" aria-labelledby="ptModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-4">
+                    <div class="modal-header">
+                        <h4 class="modal-title fw-bold" id="ptModalLabel">Pendirian PT</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Left Section -->
+                            <div class="col-md-7">
+                                <p>
+                                    Pohon Hukum menyediakan layanan profesional dalam pendirian Perseroan Terbatas (PT) secara komprehensif dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.
+                                </p>
+                                <p class="fw-bold fs-4">*Start from Rp8.500.000,-</p>
+                                <button class="btn btn-success" style="background-color: #6f7f53;"> <i class="fab fa-whatsapp fa-lg"></i> Hubungi Kami Sekarang</button>
+                            </div>
+                            
+                            <!-- Right Section - Grey Box -->
+                            <div class="col-md-5">
+                                <div class="p-3" style="background-color: #f1f1f1; border-radius: 8px;">
+                                    <h5 class="fw-bold">PT PMDN (Penanaman Modal Dalam Negeri)</h5>
+                                    <ul class="ps-3">
+                                        <li>Pemeriksaan dan Pemesanan Nama PT</li>
+                                        <li>Pembuatan Akta Pendirian oleh Notaris</li>
+                                        <li>Pengesahan Akta Perseroan oleh Notaris</li>
+                                        <li>Surat Ketetapan dari Kementerian Hukum dan HAM</li>
+                                        <li>NPWP</li>
+                                        <li>Nomor Induk Berusaha (NIB) OSS RBA</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Small Text at Bottom Left -->
+                        <p class="text-muted mt-3" style="font-size: 0.9rem;">
+                            *: Harga tercantum adalah harga mulai dari (bergantung pada tingkat kompleksitas bisnis)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer class="mt-auto py-4" style="background-color: #83945A; color: white;">
+        <div class="container">
+            <div class="row">
+                <!-- Contact (Left) -->
+                <div class="col-md-4 text-start">
+                    <img src="assets/logos/logo-white.png" alt="Company Logo" style="max-width: 75px;">
+                    <p class="mt-2">Your Trusted Legal Partner</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.tiktok.com/@pohonhukumindonesia" style="text-decoration: none;" class="text-white me-3">
+                            <i class="fab fa-tiktok fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pohon.hukum" style="text-decoration: none;" class="text-white me-3">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pohon-hukum-indonesia/about" style="text-decoration: none;" class="text-white">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation (Middle) -->
+                <div class="col-md-4 text-start" style="padding-left: 100px;">
+                    <h5 class="fw-bold fs-4">NAVIGATION</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Address (Right) -->
+                <div class="col-md-4 text-start" style="padding-left: 100px;">
+                    <h5 class="fw-bold fs-4">JAKARTA</h5>
+                    <p class="mb-0">Jl Tawakal Raya No 39 C, Tomang,</p>
+                    <p class="mb-0">Grogol Petamburan,</p>
+                    <p>Jakarta Barat</p>
+                </div>
+            </div>
+
+            <!-- Copyright Text (Centered at Bottom) -->
+            <div class="text-center mt-4">
+                <p class="mb-0">Copyright © 2022 Pohon Hukum - All Rights Reserved</p>
+                <p class="mb-0">A Business of PT Pohon Hukum Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
