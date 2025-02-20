@@ -21,12 +21,34 @@
             padding-top: 3rem;
         }
 
-        .active-nav {
-            background-color: #83945A; 
-            color: white !important;
+        /* Ensure nav items have consistent width */
+        .nav-item {
+            min-width: 140px; /* Adjust as needed for better width */
+            text-align: center; /* Ensures text is centered */
+        }
+
+        /* Style for all nav links */
+        .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease;
             border-radius: 50px;
-            padding: 8px 20px;
-            transition: background-color 0.3s ease;
+            padding: 12px 20px;
+            display: block; /* Ensures full width */
+            width: 100%; /* Fills parent `.nav-item` */
+        }
+
+        /* Hover effect */
+        .nav-link:hover {
+            background-color: #6f7f53;
+            color: white !important;
+        }
+
+        /* Active link styling */
+        .active-nav {
+            background-color: #83945A;
+            color: white !important;
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
         }
 
         .active-nav:hover {
@@ -171,24 +193,34 @@
     <!-- Header Section -->
     <header class="py-3">
         <div class="container">
-            <nav class="d-flex align-items-center justify-content-between">
-                <!-- Logo on the left -->
-                <a href="index.html">
-                    <img src="assets/logos/logo.png" alt="Company Logo" class="img-fluid d-block mx-auto d-md-inline" style="height: 150px; max-width: 300px;">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logos/logo.png" alt="Company Logo" class="img-fluid" style="height: 150px; max-width: 300px;">
                 </a>
 
-                <!-- Navigation Menu -->
-                <ul class="nav fs-5">
-                    <li class="nav-item mx-4">
-                        <a class="nav-link text-dark" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link active-nav" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link text-dark" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
+                <!-- Burger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav fs-5">
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link text-dark" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link active-nav" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link text-dark" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                            <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>

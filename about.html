@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pohon Hukum</title>
+    <link rel="icon" type="image/png" href="assets/logos/logo-inverted.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        header {
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        main {
+            padding-top: 3rem; /* Adjust top padding for main content */
+        }
+
+        /* Ensure nav items have consistent width */
+        .nav-item {
+            min-width: 140px; /* Adjust as needed for better width */
+            text-align: center; /* Ensures text is centered */
+        }
+
+        /* Style for all nav links */
+        .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: block; /* Ensures full width */
+            width: 100%; /* Fills parent `.nav-item` */
+        }
+
+        /* Hover effect */
+        .nav-link:hover {
+            background-color: #6f7f53;
+            color: white !important;
+        }
+
+        /* Active link styling */
+        .active-nav {
+            background-color: #83945A;
+            color: white !important;
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+        }
+
+        .active-nav:hover {
+            background-color: #6f7f53;
+            color: white !important;
+        }
+
+        .equal-height {
+            min-height: 320px; /* Adjust based on the longest list */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start; /* Centers the content vertically */
+        }
+
+        .list-unstyled li {
+            font-weight: bold; /* Make list items bold */
+            margin-bottom: 10px; /* Add space between list items */
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header Section -->
+    <header class="py-5 text-white">
+    <div class="container" style="background: url('assets/images/about-background-1.png') no-repeat center center;
+    background-size: cover;">
+        <nav class="navbar navbar-expand-lg">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logos/logo.png" alt="Company Logo" class="img-fluid" style="height: 150px; max-width: 300px;">
+            </a>
+
+            <!-- Burger Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                        <a class="nav-link text-dark" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                        <a class="nav-link text-dark" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                        <a class="nav-link active-nav" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item mx-lg-4 my-2 my-lg-0">
+                        <a class="nav-link text-dark" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Header Text -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <h1 class="fw-bold display-1">We Help Companies.</h1>
+            </div>
+            <div class="col-md-6">
+                <p class="fs-5">Kami membantu perusahaan dalam memastikan kepatuhan hukum, pajak dan laporan keuangan yang transparan.</p>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side - Paragraph -->
+                <div class="col-md-6">
+                    <p class="fs-5">
+                        <strong>PT Pohon Hukum Indonesia (Pohon Hukum)</strong> adalah perusahaan yang bergerak di bidang layanan hukum, riset, dan edukasi hukum di Indonesia. Dengan komitmen tinggi terhadap integritas, profesionalisme, dan inovasi, kami hadir untuk memberikan solusi hukum yang komprehensif bagi individu, bisnis, dan lembaga.
+                    </p>
+                    <p class="fs-5">
+                        Sebagai mitra terpercaya dalam dunia hukum, kami menyediakan berbagai layanan, termasuk konsultasi hukum, penyusunan dokumen legal serta riset hukum mendalam. Didukung oleh tim ahli yang terdiri dari praktisi hukum berpengalaman, kami berupaya memberikan layanan yang berkualitas dan berbasis data.
+                    </p>
+                </div>
+
+                <!-- Right Side - Title and Logo -->
+                <div class="col-md-6 text-center">
+                    <h1 class="fw-bold display-4">Who We Are</h1>
+                    <img src="assets/logos/logo.png" alt="Company Logo" class="img-fluid mt-3" style="max-width: 250px;">
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <section class="py-5" style="background-color: #83945A; color: white;">
+                <div class="container">
+                    <div class="row text-center">
+                        <!-- Column 1 -->
+                        <div class="col-md-3">
+                            <h1 class="fw-bold display-5">100+</h1>
+                            <p class="fs-5">cases completed</p>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="col-md-3">
+                            <h1 class="fw-bold display-5">50+</h1>
+                            <p class="fs-5">companies built</p>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="col-md-3">
+                            <h1 class="fw-bold display-5">5+</h1>
+                            <p class="fs-5">years of expertise</p>
+                        </div>
+                        <!-- Column 4 -->
+                        <div class="col-md-3">
+                            <h1 class="fw-bold display-5">250+</h1>
+                            <p class="fs-5">satisfied clients</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Image Section Below Statistics -->
+            <section class="py-5 text-center">
+                <div class="container">
+                    <img src="assets/images/visi.png" alt="Vision Image" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                </div>
+            </section>
+
+            <!-- Our Team Section -->
+            <section class="py-5 text-left">
+                <div class="container">
+                    <h1 class="fw-bold display-4">Our Team</h1>
+                    <img src="assets/images/profile.png" alt="Our Team" class="img-fluid rounded mt-3" style="max-width: 100%; height: auto;">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer class="mt-auto py-4" style="background-color: #83945A; color: white;">
+        <div class="container">
+            <div class="row">
+                <!-- Contact (Left) -->
+                <div class="col-md-4 text-start">
+                    <img src="assets/logos/logo-white.png" alt="Company Logo" style="max-width: 75px;">
+                    <p class="mt-2">Your Trusted Legal Partner</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.tiktok.com/@pohonhukumindonesia" style="text-decoration: none;" class="text-white me-3">
+                            <i class="fab fa-tiktok fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pohon.hukum" style="text-decoration: none;" class="text-white me-3">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pohon-hukum-indonesia/about" style="text-decoration: none;" class="text-white">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation (Middle) -->
+                <div class="col-md-4 text-start" style="padding-left: 100px;">
+                    <h5 class="fw-bold fs-4">NAVIGATION</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Address (Right) -->
+                <div class="col-md-4 text-start" style="padding-left: 100px;">
+                    <h5 class="fw-bold fs-4">JAKARTA</h5>
+                    <p class="mb-0">Jl Tawakal Raya No 39 C, Tomang,</p>
+                    <p class="mb-0">Grogol Petamburan,</p>
+                    <p>Jakarta Barat</p>
+                </div>
+            </div>
+
+            <!-- Copyright Text (Centered at Bottom) -->
+            <div class="text-center mt-4">
+                <p class="mb-0">Copyright © 2022 Pohon Hukum - All Rights Reserved</p>
+                <p class="mb-0">A Business of PT Pohon Hukum Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
