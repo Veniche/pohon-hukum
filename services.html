@@ -316,323 +316,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const servicesData = [
-            {
-                "id": "legalitas",
-                "title": "Legalitas",
-                "icon": "assets/icons/Legalitas.png",
-                "services": [
-                {
-                    "img": "assets/items/PT PMDN_grey.png",
-                    "title": "Pembuatan PT Penanaman Modal Dalam Negeri (PMDN)",
-                    "price": "Rp8.500.000,-",
-                    "link": "ptModal",
-                    "modalTitle": "Pembuatan PT PMDN",
-                    "modalDescription": "Pohon Hukum menyediakan layanan profesional dalam pendirian Perseroan Terbatas (PT) secara komprehensif dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.",
-                    "modalList": [
-                        "Pemeriksaan dan Pemesanan Nama PT",
-                        "Pembuatan Akta Pendirian oleh Notaris",
-                        "Pengesahan Akta Perseroan oleh Notaris",
-                        "Surat Ketetapan dari Kementerian Hukum dan HAM",
-                        "NPWP",
-                        "Nomor Induk Berusaha (NIB) OSS RBA"
-                    ]
-                },
-                {
-                    "img": "assets/items/PT PMA_grey.png",
-                    "title": "Pembuatan PT Penanaman Modal Asing (PMA)",
-                    "price": "Rp11.000.000,-",
-                    "link": "pmaModal",
-                    "modalTitle": "Pembuatan PT PMA",
-                    "modalDescription": "Pohon Hukum menyediakan layanan profesional dalam pendirian Perseroan Terbatas (PT) secara komprehensif dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.",
-                    "modalList": [
-                        "Pemeriksaan dan Pemesanan Nama PT",
-                        "Pembuatan Akta Pendirian oleh Notaris",
-                        "Pengesahan Akta Perseroan oleh Notaris",
-                        "Surat Ketetapan dari Kementerian Hukum dan HAM",
-                        "NPWP",
-                        "Nomor Induk Berusaha (NIB) OSS RBA"
-                    ]
-                },
-                {
-                    "img": "assets/items/Perubahan Akta_grey.png",
-                    "title": "Akta Perubahan PT",
-                    "price": "Rp6.000.000,-",
-                    "link": "aktaModal",
-                    "modalTitle": "Akta Perubahan PT",
-                    "modalDescription": "Butuh perubahan akta perusahaan? Pohon Hukum siap membantu proses perubahan nama, modal, direksi, bidang usaha (KBLI), hingga domisili dengan cepat dan sesuai regulasi.",
-                    "modalList": [
-                        "Akta Perubahan",
-                        "Surat Ketetapan dari Kementerian Hukum dan HAM",
-                        "Nomor Induk Berusaha (NIB) OSS RBA"
-                    ]
-                },
-                {
-                    "img": "assets/items/Pendirian CV_grey.png",
-                    "title": "Pembuatan CV (Persekutuan Komanditer)",
-                    "price": "Rp6.000.000,-",
-                    "link": "cvModal",
-                    "modalTitle": "Pembuatan CV",
-                    "modalDescription": "Pohon Hukum hadir untuk membantu Anda dalam proses pendirian CV dengan mudah, cepat, dan sesuai dengan ketentuan hukum yang berlaku.",
-                    "modalList": [
-                        "Pemeriksaan dan Pemesanan Nama CV",
-                        "Pengesahan Pengadilan Negeri",
-                        "NPWP",
-                        "Nomor Induk Berusaha (NIB) OSS RBA"
-                    ]
-                },
-                {
-                    "img": "assets/items/Pendirian Firma_grey.png",
-                    "title": "Pembuatan Firma",
-                    "price": "Rp6.000.000,-",
-                    "link": "firmaModal",
-                    "modalTitle": "Pembuatan Firma",
-                    "modalDescription": "Pohon Hukum hadir untuk membantu Anda dalam proses pendirian Firma dengan mudah, cepat, dan sesuai dengan ketentuan hukum yang berlaku.",
-                    "modalList": [
-                        "Pemeriksaan dan Pemesanan Nama Firma",
-                        "Pengesahan Pengadilan Negeri",
-                        "NPWP",
-                        "Nomor Induk Berusaha (NIB) OSS RBA"
-                    ]
-                },
-                {
-                    "img": "assets/items/Pendaftaran Merek_grey.png",
-                    "title": "Pendaftaran Merek",
-                    "price": "Rp3.500.000,-",
-                    "link": "merekModal",
-                    "modalTitle": "HAKI",
-                    "modalDescription": "Pohon Hukum menyediakan layanan pendaftaran merek untuk membantu Anda dalam melindungi identitas dan hak kekayaan intelektual.",
-                    "modalList": [
-                        "Pengecekan Merek",
-                        "Permohonan Pendaftaran",
-                        "Monitoring Pendaftaran",
-                        "Sertifikat tanda daftar",
-                        "Sertifikat Merek",
-                        "Konsultasi seputar pendaftaran Merek"
-                    ]
-                },
-                {
-                    "img": "assets/items/Online Single Submission_grey.png",
-                    "title": "Nomor Induk Berusaha (NIB - OSS RBA)",
-                    "price": "Rp1.500.000,-",
-                    "link": "nibModal",
-                    "modalTitle": "NIB (OSS RBA)",
-                    "modalDescription": "Pohon Hukum menyediakan layanan pengurusan Nomor Induk Berusaha (NIB - OSS RBA) yang merupakan dokumen wajib sebagai tanda pengenal atau identitas bisnis Anda.",
-                    "modalList": [
-                        "Nomor Induk Berusaha (NIB)",
-                        "Izin Lokasi",
-                        "Izin Usaha Perdagangan"
-                    ]
-                }
-                ]
-            },
-            {
-                "id": "perpajakan",
-                "title": "Perpajakan",
-                "icon": "assets/icons/Perpajakan.png",
-                "services": [
-                {
-                    "img": "assets/items/Laporan Pajak Bulanan_grey.png",
-                    "title": "Laporan Pajak Bulanan",
-                    "price": "Rp3.500.000,-",
-                    "link": "laporBulananModal",
-                    "modalTitle": "Laporan Pajak Bulanan PT/CV",
-                    "modalDescription": "Kelola kewajiban pajak bisnis Anda dengan mudah! Pohon Hukum menyediakan layanan pelaporan pajak bulanan untuk memastikan kepatuhan dan menghindari sanksi perpajakan.",
-                    "modalList": [
-                        "Draft Laporan Bulanan <ul><li>PPH 21</li><li>PPH 23</li><li>4 (2)</li></ul>",
-                        "Draft Template Coretax / E-Form",
-                        "Submit Laporan Pajak Bulanan",
-                        "Konsultasi Online"
-                    ]
-                },
-                {
-                    "img": "assets/items/Laporan Pajak Tahunan_grey.png",
-                    "title": "Laporan Pajak Tahunan",
-                    "price": "Rp12.500.000,-",
-                    "link": "laporTahunanModal",
-                    "modalTitle": "Laporan Pajak Tahunan PT/CV",
-                    "modalDescription": "Pastikan perusahaan Anda tetap patuh dengan kewajiban pelaporan tahunan! Pohon Hukum menyediakan layanan pembuatan & penyampaian laporan tahunan untuk PT/CV sesuai regulasi",
-                    "modalList": [
-                        "Draft Corporate Income Tax Return (CITR) <ul><li>Perhitungan List Aset</li><li>Perhitungan Inventory</li><li>Perhitungan kurang bayar, Angsuran pph 25</li><li>Persamaan SPM PPH 21 dengan biaya gaji</li></ul>",
-                        "Draft Template Coretax / E-Form",
-                        "Submit Laporan Pajak Tahunan",
-                        "Konsultasi Online"
-                    ]
-                },
-                {
-                    "img": "assets/items/Pengembalian Pajak_grey.png",
-                    "title": "Pengembalian Pajak",
-                    "price": "Rp3.500.000,-",
-                    "link": "pengembalianModal",
-                    "modalTitle": "Pengembalian Pajak PT",
-                    "modalDescription": "Dapatkan kembali kelebihan pembayaran pajak Anda dengan proses yang cepat dan sesuai regulasi! Pohon Hukum membantu perusahaan dan perorangan dalam mengajukan pengembalian pajak (tax refund) ke otoritas pajak.",
-                    "modalList": [
-                        "Pengembalian PPh & PPN",
-                        "Penyusunan Dokumen & Pengajuan",
-                        "Pendampingan hingga Refund Cair"
-                    ]
-                },
-                {
-                    "img": "assets/items/NPWP Perorangan_grey.png",
-                    "title": "NPWP Perorangan",
-                    "price": "Rp500.000,-",
-                    "link": "npwpModal",
-                    "modalTitle": "NPWP",
-                    "modalDescription": "Dapatkan NPWP Perorangan dengan mudah untuk memenuhi kewajiban pajak dan keperluan administrasi. Pohon Hukum siap membantu proses pendaftaran dengan cepat dan aman.",
-                    "modalList": [
-                        "Nomor Pokok Wajib Pajak (NPWP)"
-                    ]
-                },
-                {
-                    "img": "assets/items/NPWP Perusahaan_grey.png",
-                    "title": "NPWP Perusahaan",
-                    "price": "Rp2.500.000,-",
-                    "link": "npwpModal",
-                    "modalTitle": "Nomor Pokok Wajib Pajak (NPWP) Perseroan",
-                    "modalDescription": "Butuh NPWP perusahaan untuk keperluan bisnis dan kepatuhan pajak? Pohon Hukum siap membantu proses pendaftaran NPWP bagi PT dan CV dengan cepat dan sesuai regulasi.",
-                    "modalList": [
-                        "Nomor Pokok Wajib Pajak (NPWP)",
-                        "Surat Keterangan Terdaftar Pajak",
-                        "Surat Penerbitan Akun Wajib Pajak"
-                    ]
-                }
-                ]
-            },
-            {
-                "id": "konsultasi",
-                "title": "Konsultasi Hukum",
-                "icon": "assets/icons/Konsultasi Hukum.png",
-                "services": [
-                {
-                    "img": "assets/items/Advokat_grey.png",
-                    "title": "Advokat",
-                    "price": "Rp90.000,-",
-                    "link": "konsultasiModal",
-                    "modalTitle": "Advokat",
-                    "modalDescription": "Pohon Hukum siap membantu Anda dengan layanan advokat profesional untuk menyelesaikan berbagai permasalahan hukum. Percayakan urusan hukum Anda kepada kami untuk solusi yang tepat dan terpercaya!",
-                    "modalList": [
-                        "Konsultasi Hukum",
-                        "Legal Opinion"
-                    ]
-                },
-                {
-                    "img": "assets/items/Notaris_grey.png",
-                    "title": "Notaris",
-                    "price": "Rp350.000,-",
-                    "link": "notarisModal",
-                    "modalTitle": "Notaris",
-                    "modalDescription": "Pohon Hukum menyediakan layanan notaris profesional untuk legalisasi dokumen, pembuatan akta, dan kebutuhan hukum lainnya dengan proses yang aman dan terpercaya",
-                    "modalList": [
-                        "Konsultasi Hukum",
-                        "Legal Opinion"
-                    ]
-                }
-                ]
-            },
-            {
-                "id": "jasa-hukum",
-                "title": "Jasa Hukum",
-                "icon": "assets/icons/Jasa Hukum.png",
-                "services": [
-                {
-                    "img": "assets/items/Mediator_grey.png",
-                    "title": "Mediator",
-                    "price": "Rp450.000,-",
-                    "link": "mediatorModal",
-                    "modalTitle": "Mediator",
-                    "modalDescription": "Pohon Hukum siap membantu menyelesaikan sengketa Anda dengan layanan mediator profesional, menghadirkan solusi yang adil dan damai bagi semua pihak",
-                    "modalList": [
-                        "Bantuan Penyelesaian Sengketa dengan Mediasi"
-                    ]
-                }
-                ]
-            },
-            {
-                "id": "perkantoran",
-                "title": "Perkantoran",
-                "icon": "assets/icons/Perkantoran.png",
-                "services": [
-                {
-                    "img": "assets/items/Virtual Office_grey.png",
-                    "title": "Virtual Office",
-                    "price": "Rp2.000.000,-",
-                    "link": "advokatModal",
-                    "modalTitle": "Virtual Office",
-                    "modalDescription": "Pohon Hukum menyediakan layanan Virtual Office untuk membantu bisnis Anda memiliki alamat kantor profesional di area CBD tanpa harus menyewa ruang fisik.",
-                    "modalList": [
-                        "Penyewaan Alamat VO 1 tahun",
-                        "Penerimaan Surat dan Paket",
-                        "Informasi Penerimaan Surat dan Paket"
-                    ]
-                },
-                {
-                    "img": "assets/items/Sewa Office_grey.png",
-                    "title": "Sewa Office",
-                    "price": "Rp65.000.000,-",
-                    "link": "officeModal",
-                    "modalTitle": "Sewa Office",
-                    "modalDescription": "Pohon Hukum menyediakan layanan sewa kantor dengan fasilitas lengkap dan lokasi strategis. Solusi ideal untuk bisnis Anda dengan lingkungan kerja yang nyaman dan profesional.",
-                    "modalList": [
-                        "Ipl",
-                        "Internet",
-                        "Air",
-                        "Listrik",
-                        "Bersih bersih",
-                        "Galon",
-                        "Pantry Supplies (coffee, tea & snack)",
-                        "Full furnished tinggal bawa diri",
-                        "3 meja kerja",
-                        "Sofa",
-                        "Bean bag",
-                        "Whiteboard",
-                        "Lemari / rak simpan"
-                    ]
-                }
-                ]
-            },
-            {
-                "id": "lainnya",
-                "title": "Jasa Lainnya",
-                "icon": "assets/icons/Jasa Lainnya.png",
-                "services": [
-                {
-                    "img": "assets/items/Pembuatan Website_grey.png",
-                    "title": "Pembuatan Website",
-                    "price": "Rp3.500.000,-",
-                    "link": "websiteModal",
-                    "modalTitle": "Pembuatan Website",
-                    "modalDescription": "Bangun kehadiran digital yang profesional dengan website berkualitas! Pohon Hukum juga menyediakan layanan pembuatan website yang responsif, cepat, dan sesuai kebutuhan bisnis Anda.",
-                    "modalList": [
-                        "Website Perusahaan & Portofolio",
-                        "Konsultasi sampai dengan maksimal 5 (lima) kali",
-                        "Hosting"
-                    ]
-                },
-                {
-                    "img": "assets/items/Digital Marketing_grey.png",
-                    "title": "Digital Marketing",
-                    "price": "Rp5.000.000,-",
-                    "link": "marketingModal",
-                    "modalTitle": "Digital Marketing",
-                    "modalDescription": "Pohon Hukum menawarkan layanan digital marketing profesional untuk meningkatkan visibilitas dan pertumbuhan bisnis Anda. Dari strategi SEO, media sosial, hingga iklan digital kami siap membantu Anda mencapai target pasar yang tepat!",
-                    "modalList": [
-                        "Riset Audiens",
-                        "Perencanaan Strategis",
-                        "Strategi Peran Platform",
-                        "Strategi Konten",
-                        "Pengembangan Konten",
-                        "Laporan dan Analisis",
-                        "Rencana saran"
-                    ]
-                }
-                ]
-            }
-        ]
+        let servicesData = []; // Initialize as empty array
 
-        document.addEventListener("DOMContentLoaded", function () {
+        async function fetchServicesData() {
+            try {
+                const response = await fetch('services.json'); // Adjust path if needed
+                servicesData = await response.json(); // Store fetched data
+                console.log("Loaded services data:", servicesData);
+                initPage(); // Populate the page AFTER fetching data
+            } catch (error) {
+                console.error("Error loading services data:", error);
+            }
+        }
+
+        function initPage() {
             const categoriesContainer = document.getElementById("categories");
             const servicesContainer = document.getElementById("services");
             const modalContainer = document.getElementById("modal-container");
+
+            categoriesContainer.innerHTML = "";
+            servicesContainer.innerHTML = "";
+            modalContainer.innerHTML = "";
 
             servicesData.forEach(category => {
                 // Create category icons
@@ -709,7 +413,9 @@
                 servicesHtml += `</div></div>`;
                 servicesContainer.innerHTML += servicesHtml;
             });
-        });
+        }
+        // Fetch data when the page loads
+        document.addEventListener("DOMContentLoaded", fetchServicesData);
     </script>
 </body>
 </html>
