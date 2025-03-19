@@ -68,6 +68,111 @@
         footer {
             text-align: center;
         }
+
+        .visi-misi-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .visi-misi-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            /* gap: 350px; */
+        }
+
+        .visi-box {
+            /* margin-top: 20%; */
+            width: 33%; /* Smaller box */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: left;
+            border-radius: 10px;
+            padding-left: 15px;
+        }
+
+        .misi-box {
+            top: 80%;
+            width: 35%; /* Larger box */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: left;
+            border-radius: 10px;
+            padding-left: 15px;
+            padding-top: 60px;
+        }
+
+
+        @media (max-width: 500px) {
+            .visimisi-text {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: Bold;
+                font-size: 28px !important;
+                letter-spacing: -2.2% !important;
+                line-height: 150% !important;
+            }
+            .par-text{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                font-size: 14px !important;
+                letter-spacing: -1.9% !important;
+                line-height: 150% !important;
+            }
+        }
+
+        @media (min-width: 501px) and (max-width: 991px) {
+            .visimisi-text {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: Bold;
+                font-size: 44px !important;
+                letter-spacing: -2.2% !important;
+                line-height: 150% !important;
+            }
+            .par-text{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                font-size: 17px !important;
+                letter-spacing: -1.9% !important;
+                line-height: 150% !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .visimisi-text {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: Bold;
+                font-size: 60px !important;
+                letter-spacing: -2.2% !important;
+                line-height: 150% !important;
+            }
+            .par-text{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                font-size: 20px !important;
+                letter-spacing: -1.9% !important;
+                line-height: 150% !important;
+            }
+        }
+
+        /* Extra small font size for small screens */
+        @media (max-width: 576px) {
+            .visi-box p, .misi-box ol li {
+                font-size: 0.5rem; /* Manually reduce text size */
+            }
+        }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -166,10 +271,30 @@
                 </div>
             </section>
 
-            <!-- Image Section Below Statistics -->
-            <section class="py-5 text-center">
-                <div class="container">
-                    <img src="assets/images/visi-misi.png" alt="Visi Misi Image" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            <!-- Image Section with Overlay Text -->
+            <section class="py-5 text-center position-relative">
+                <div class="container position-relative">
+                    <div class="visi-misi-container">
+                        <img src="assets/images/visi-misi.png" alt="Visi Misi Image" class="img-fluid rounded">
+                        <div class="overlay">
+                            <div class="visi-box">
+                                <h2 class="fw-bold fs-3 fs-md-2 fs-lg-1 visimisi-text">Visi</h2>
+                                <p class="fs-md-5 fs-lg-4 par-text">
+                                    Menjadi perusahaan terdepan dalam pelayanan hukum yang berkontribusi pada sistem hukum yang transparan, adil, dan progresif di Indonesia.
+                                </p>
+                            </div>
+                            
+                            <div class="misi-box">
+                                <h2 class="fw-bold fs-3 fs-md-2 fs-lg-1 visimisi-text">Misi</h2>
+                                <ol class="par-text">
+                                    <li>Memberikan layanan hukum yang profesional, terpercaya, dan berbasis riset mendalam.</li>
+                                    <li>Menyediakan edukasi hukum yang berkualitas untuk meningkatkan pemahaman masyarakat.</li>
+                                    <li>Mengembangkan inovasi dalam sistem pelayanan hukum berbasis teknologi.</li>
+                                    <li>Membangun kolaborasi dengan berbagai pihak untuk memperkuat sistem hukum yang lebih baik di Indonesia.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -226,7 +351,7 @@
 
             <!-- Copyright Text (Centered at Bottom) -->
             <div class="text-center mt-4">
-                <p class="mb-0">Copyright © 2022 Pohon Hukum - All Rights Reserved</p>
+                <p class="mb-0">Copyright © 2025 Pohon Hukum - All Rights Reserved</p>
                 <p class="mb-0">A Business of PT Pohon Hukum Indonesia</p>
             </div>
         </div>
